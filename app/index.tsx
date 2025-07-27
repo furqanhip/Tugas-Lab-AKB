@@ -1,82 +1,28 @@
-import { Text, View } from "react-native";
+import React from 'react';
+import { View, ScrollView, Text } from 'react-native';
+import AntDesign from '@expo/vector-icons/AntDesign';
+import Entypo from '@expo/vector-icons/Entypo';
+import EvilIcons from '@expo/vector-icons/EvilIcons';
+import Feather from '@expo/vector-icons/Feather';
+import FontAwesome from '@expo/vector-icons/FontAwesome';
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        gap: 20, // jarak antar elemen
-      }}
-    >
+    <ScrollView contentContainerStyle={{ padding: 20, flexGrow: 1 }}>
+      <Text style={{ fontSize: 50, marginBottom: 10 }}>Daftar 10 Ikon:</Text>
 
-      {/* Segitiga di bagian atas */}
-      <View
-        style={{
-          width: 0,
-          height: 0,
-          borderLeftWidth: 30,
-          borderRightWidth: 30,
-          borderBottomWidth: 60,
-          borderStyle: "solid",
-          backgroundColor: "transparent",
-          borderLeftColor: "transparent",
-          borderRightColor: "transparent",
-          borderBottomColor: "orange",
-        }}
-      />
-
-      {/* Bentuk Pil (Oval Horizontal) */}
-      <View
-        style={{
-          backgroundColor: "blue",
-          paddingHorizontal: 30,
-          paddingVertical: 10,
-          borderRadius: 50,
-        }}
-      >
-        <Text style={{ fontSize: 20 }}>105841106822</Text>
+      <View style={{ flexDirection: "row", flexWrap: "wrap", justifyContent: "space-between" }}>
+        <AntDesign name="stepforward" size={100} color="Red" />
+        <AntDesign name="stepbackward" size={100} color="Red" />
+        <Entypo name="infinity" size={100} color="Red" />
+        <Entypo name="aircraft" size={100} color="Red" />
+        <EvilIcons name="bell" size={100} color="Red" />
+        <EvilIcons name="calendar" size={100} color="Red" />
+        <Feather name="activity" size={100} color="Red" />
+        <Feather name="airplay" size={100} color="Red" />
+        <FontAwesome name="heart" size={100} color="Red" />
+        <FontAwesome name="star" size={100} color="Red" />
       </View>
-
-      {/* Persegi Panjang (Nama) */}
-      <View
-        style={{
-          backgroundColor: "green",
-          width: 200,
-          paddingVertical: 15,
-          alignItems: "center",
-          borderRadius: 10,
-        }}
-      >
-        <Text
-          style={{
-            color: "black",
-            fontWeight: "bold",
-            fontSize: 16,
-          }}
-        >
-          Yaumulfurqan
-        </Text>
-      </View>
-
-      {/* Lingkaran */}
-      <View
-        style={{
-          width: 20,
-          height: 20,
-          backgroundColor: "blue",
-          borderRadius: 100,
-        }}
-      />
-    </View>
+    </ScrollView>
   );
 }
-
-
-
-// TUGAS!!
-// 1. tAMBAHKAN BENTUK SEGITIGA,  BENTUK PIL DAN PERSEGI PANJANG.
-// 2. DIDALAM SEGI PANJANG. BERISI NAMA.
-// 3. DIDALAM BENTUK PIL BERISI NIM.
-// 4. TERSERAH MAU BUAT BER URUT ATAU TIDAK.
